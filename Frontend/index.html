@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <div class="header">
+                <h1>🎂 Age Calculator</h1>
+                <p class="subtitle">Calculate your exact age in years, months, and days</p>
+            </div>
+
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="birthdate">Enter Your Date of Birth</label>
+                    <input type="date" id="birthdate" class="date-input" max="">
+                </div>
+
+                <button onclick="calculateAge()" class="calculate-btn">
+                    Calculate Age
+                </button>
+            </div>
+
+            <div id="result" class="result-section hidden">
+                <div class="result-header">
+                    <h2>Your Age</h2>
+                </div>
+                
+                <div class="age-display">
+                    <div class="age-box">
+                        <div class="age-number" id="years">0</div>
+                        <div class="age-label">Years</div>
+                    </div>
+                    <div class="age-box">
+                        <div class="age-number" id="months">0</div>
+                        <div class="age-label">Months</div>
+                    </div>
+                    <div class="age-box">
+                        <div class="age-number" id="days">0</div>
+                        <div class="age-label">Days</div>
+                    </div>
+                </div>
+
+                <div class="additional-info">
+                    <div class="info-item">
+                        <span class="info-label">Total Days Lived:</span>
+                        <span class="info-value" id="totalDays">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Total Hours:</span>
+                        <span class="info-value" id="totalHours">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Next Birthday In:</span>
+                        <span class="info-value" id="nextBirthday">0 days</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Day of Birth:</span>
+                        <span class="info-value" id="dayOfWeek">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="error" class="error-message hidden"></div>
+        </div>
+
+        <footer class="footer">
+            <p>Made with ❤️ for Python Project</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
